@@ -2,7 +2,7 @@
 
 A multi-page Bulgarian restaurant site with responsive navigation and modern styling.
 
-**Live Demo:** https://Niko5886.github.io/Resturant/
+**Live Demo:** https://theoldflorence.netlify.app/
 
 ## Features
 - Responsive header with hamburger menu
