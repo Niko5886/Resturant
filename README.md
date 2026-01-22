@@ -1,4 +1,4 @@
-# Stara Florencia (Restaurant Website)
+# The old Florence (Restaurant Website)
 
 A multi-page Bulgarian restaurant site with responsive navigation and modern styling.
 
