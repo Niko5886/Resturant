@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Старата Флоренция - Контакти</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Старата Флоренция</h1>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="mainNav">
+            <a href="index.html">Начало</a>
+            <a href="menu.html">Меню</a>
+            <a href="about.html">За нас</a>
+            <a href="gallery.html">Галерия</a>
+            <a href="contacts.html">Контакти</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Контакти</h2>
+        
+        <h3>Свържете се с нас</h3>
+        
+        <p><strong>Адрес:</strong><br>
+        ул. "Витошка" 15<br>
+        Русе 1000<br>
+        България</p>
+        
+        <p><strong>Телефон:</strong><br>
+        +359 2 123 4567</p>
+        
+        <p><strong>Мобилен:</strong><br>
+        +359 888 123 456</p>
+        
+        <p><strong>Email:</strong><br>
+        info@starataflorencia.bg</p>
+        
+        <p><strong>Работно време:</strong><br>
+        Понеделник - Петък: 11:00 - 23:00<br>
+        Събота - Неделя: 12:00 - 00:00</p>
+        
+        <hr>
+        
+        <h3>Резервация</h3>
+        <form action="#" method="post">
+            <p>
+                <label for="name">Име:</label><br>
+                <input type="text" id="name" name="name" required>
+            </p>
+            
+            <p>
+                <label for="phone">Телефон:</label><br>
+                <input type="tel" id="phone" name="phone" required>
+            </p>
+            
+            <p>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email">
+            </p>
+            
+            <p>
+                <label for="date">Дата:</label><br>
+                <input type="date" id="date" name="date" required>
+            </p>
+            
+            <p>
+                <label for="time">Час:</label><br>
+                <input type="time" id="time" name="time" required>
+            </p>
+            
+            <p>
+                <label for="guests">Брой гости:</label><br>
+                <input type="number" id="guests" name="guests" min="1" max="20" required>
+            </p>
+            
+            <p>
+                <label for="message">Допълнителни желания:</label><br>
+                <textarea id="message" name="message" rows="4" cols="40"></textarea>
+            </p>
+            
+            <p>
+                <input type="submit" value="Изпрати резервация">
+                <input type="reset" value="Изчисти">
+            </p>
+        </form>
+        
+        <hr>
+        
+        <h3>Как да ни намерите</h3>
+        <p>Ресторантът се намира в центъра на Русе, на 5 минути пеша от централния площад.</p>
+        
+        <p><strong>С градски транспорт:</strong><br>
+        Автобуси: 9, 22, 12, 13<br>
+        Трамваи: 6, 7, 9<br>
+        </p>
+        
+        <p><strong>Паркинг:</strong><br>
+        На разположение на гостите е подземен паркинг.</p>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 | POWERED by Nikolay Stoyanov | Всички права запазени</p>
+    </footer>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        
+        menuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            mainNav.classList.toggle('active');
+        });
+        
+        const navLinks = mainNav.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                mainNav.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

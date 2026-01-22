@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Старата Флоренция - За нас</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Старата Флоренция</h1>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="mainNav">
+            <a href="index.html">Начало</a>
+            <a href="menu.html">Меню</a>
+            <a href="about.html">За нас</a>
+            <a href="gallery.html">Галерия</a>
+            <a href="contacts.html">Контакти</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>За нас</h2>
+        
+        <h3>Нашата история</h3>
+        <p>Ресторант "Старата Флоренция" бе основан през 2015 година с мечта да донесе автентичния 
+        вкус на Италия в България в един от най-известните градове на страната Русе. Вдъхновени от красотата и богатството на тосканската кухня, 
+        ние създадохме място, където всеки гост се чувства като у дома си.</p>
+        
+        <h3>Нашата философия</h3>
+        <p>Вярваме, че добрата храна е изкуство. Всяко ястие в менюто ни е приготвено с грижа, 
+        използвайки само най-качествени съставки. Работим с доставчици от Италия, за да гарантираме 
+        автентичността на вкуса.</p>
+        
+        <h3>Нашият екип</h3>
+        <p>Екипът ни се състои от опитни готвачи, обучени в Италия, и професионален персонал, 
+        който винаги е готов да ви посрещне с усмивка. Шеф-готвачът ни, Джовани Роси , има над 
+        20 години опит в италианската кулинария.Той пристигна от Флоренция, за да сподели своите умения и страст към италианската кухня.</p>
+        
+        <h3>Нашите ценности</h3>
+        <ul>
+            <li>Качество на продуктите</li>
+            <li>Автентичност на рецептите</li>
+            <li>Гостоприемство</li>
+            <li>Семейна атмосфера</li>
+            <li>Уважение към традициите</li>
+        </ul>
+        
+        <h3>Резервации и собития</h3>
+        <p>Предлагаме възможност за резервация на маси за специални eventi, рождени дни, 
+        бизнес срещи и семейни празници. Можем да организираме и кетъринг услуги.</p>
+        
+        <p><strong>Благодарим ви, че избрахте "Старата Флоренция"!</strong></p>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 | POWERED by Nikolay Stoyanov | Всички права запазени</p>
+    </footer>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        
+        menuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            mainNav.classList.toggle('active');
+        });
+        
+        const navLinks = mainNav.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                mainNav.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Старата Флоренция - Галерия</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Старата Флоренция</h1>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="mainNav">
+            <a href="index.html">Начало</a>
+            <a href="menu.html">Меню</a>
+            <a href="about.html">За нас</a>
+            <a href="gallery.html">Галерия</a>
+            <a href="contacts.html">Контакти</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Галерия</h2>
+        
+        <h3>Нашите ястия</h3>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="img/ita2.png" alt="Италианска морски сет за двама">
+                <em>Италианска морски сет за двама</em>
+            </div>
+            <div class="gallery-item">
+                <img src="img/ita3.png" alt="Спагети със сочни кюфтенца">
+                <em>Спагети със сочни кюфтенца</em>
+            </div>
+            <div class="gallery-item">
+                <img src="img/ita4.png" alt="Италиански брускети 'На баба'">
+                <em>Италиански брускети "На баба"</em>
+            </div>
+            <div class="gallery-item">
+                <img src="img/ita5.png" alt="Пица с прошуто и рукола">
+                <em>Пица с прошуто и рукола</em>
+            </div>
+        </div>
+        
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="img/ita6.png" alt="Спагетини с телешка кълцаница">
+                <em>Спагетини с телешка кълцаница</em>
+            </div>
+            <div class="gallery-item">
+                <img src="img/ita7.png" alt="Инт">
+                <em>Тортелини "Ал Капоне"</em>
+            </div>
+            <div class="gallery-item">
+                <img src="img/ita8.png" alt="Обстановка">
+                <em>Моркса хармония</em>
+            </div>
+        </div>
+        
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="img/ita20.png" alt="Кулинарно изкуство">
+                <em>Сет Флоренция за двама</em>
+            </div>
+            <div class="gallery-item">
+                <img src="img/ita10.png" alt="Вкусове от Италия">
+                <em>Италианска салата</em>
+            </div>
+        </div>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 | POWERED by Nikolay Stoyanov | Всички права запазени</p>
+    </footer>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        
+        menuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            mainNav.classList.toggle('active');
+        });
+        
+        const navLinks = mainNav.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                mainNav.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
