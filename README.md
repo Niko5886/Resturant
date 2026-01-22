@@ -2,6 +2,8 @@
 
 A multi-page Bulgarian restaurant site with responsive navigation and modern styling.
 
+**Live Demo:** https://Niko5886.github.io/Resturant/
+
 ## Features
 - Responsive header with hamburger menu
 - Pages: Home, Menu, About, Gallery, Contacts
